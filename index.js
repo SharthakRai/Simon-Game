@@ -41,9 +41,14 @@ function nextSequence() {
   //2. Use Google/Stackoverflow to figure out how you can use jQuery to animate a flash to the button selected in step 1.
   $("#" + randomChosenColour).fadeIn(100).fadeOut(100).fadeIn(100);
 
-  //3. Use Google/Stackoverflow to figure out how you can use Javascript to play the sound for the button colour selected in step 1.
-  var audio = new Audio("sounds/" + randomChosenColour + ".mp3");
-  audio.play();
+  playSound(randomChosenColour);
+}
+
+
+//new function playsound()
+function playSound(name) {
+    var audio = new Audio("sounds/" + name + ".mp3");
+    audio.play();
 
 
 }
